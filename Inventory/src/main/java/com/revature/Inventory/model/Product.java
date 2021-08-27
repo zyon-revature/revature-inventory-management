@@ -1,5 +1,5 @@
 package com.revature.Inventory.model;
 
-public class Inventory {
+public class Product {
 
 }

@@ -1,5 +1,5 @@
 package com.revature.Inventory.manager;
 
-public interface InventoryManager {
+public interface ProductManager {
 
 }
