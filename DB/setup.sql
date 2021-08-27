@@ -2,6 +2,19 @@
 -- product
 -- product_stock
 
+-- Run if not created
+-- CREATE USER groupc WITH PASSWORD 'postgres';
+-- CREATE ROLE readwrite;
+-- GRANT readwrite TO  groupc;
+
+GRANT USAGE, CREATE ON SCHEMA inventory TO readwrite;
+GRANT ALL ON TABLE inventory.product TO readwrite;
+GRANT ALL ON TABLE inventory.productStock TO readwrite;
+
+
+
+
+
 CREATE TABLE inventory.product(
     id SERIAL,
     title VARCHAR(40) UNIQUE,
