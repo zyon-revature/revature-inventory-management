@@ -1,5 +1,5 @@
 package com.revature.Inventory.dao;
 
-public interface InventoryDao {
+public interface ProductDao {
 
 }
