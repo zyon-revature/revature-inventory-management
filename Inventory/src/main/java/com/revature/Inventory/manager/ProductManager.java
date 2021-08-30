@@ -1,5 +1,7 @@
 package com.revature.Inventory.manager;
 
-public interface ProductManager {
+import com.revature.Inventory.model.Product;
 
+public interface ProductManager{
+	public Product create (Product p);
 }
