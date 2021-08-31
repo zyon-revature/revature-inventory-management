@@ -12,4 +12,9 @@ input, select{
     width: 100%;
     clear:both;
 }
+.help-block{
+    color: red;
+    font-family:cursive
+}
+
 

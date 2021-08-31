@@ -1,13 +1,14 @@
 <h3> Please enter information below for new ticket</h3>
 <p></p>
-<div class="container">
-    <form class="createProduct" (ngSubmit)="onSubmit(f)" #f="ngForm">
+<div class="container" ng-app="app" ng-controller="ctrl">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
             <div class="form-floating">
-                <input id="title" class="form-control" type="text" name="title" placeholder="Name of Product"  ngModel>
+                <input id="title" class="form-control" type="text" name="title" 
+                placeholder="Name of Product" ngModel>
                 <label for="title">Product Name</label>
+                </div>
             </div>
-        </div>
         <p></p>
         <div>
                 <select name="category" class= "form-select" id="selections" ngModel>
@@ -30,6 +31,8 @@
         </div>
         <p></p>
     </div>
-        <button type="submit" class="btn btn-primary">Submit Product</button>
+    <div class="form-actions">
+        <button type="submit" [disabled]="f.invalid" class="btn btn-success">Submit Product</button>
+    </div>
     </form>
 </div>

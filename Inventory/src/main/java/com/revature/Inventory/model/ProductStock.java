@@ -9,13 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
-@Entity (name="productstock")
+@Entity(name = "productstock")
 public class ProductStock {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
-    @SequenceGenerator(name="id_generator", sequenceName = "productstock_id_seq", allocationSize = 1)
-	
+	@SequenceGenerator(name = "id_generator", sequenceName = "productstock_id_seq", allocationSize = 1)
+
 	private int id;
 	@Column
 	private int productid;
@@ -31,23 +31,23 @@ public class ProductStock {
 	private int quantity;
 	@Column
 	private String transactiontype;
-	
+
 	public ProductStock() {
 		super();
 	}
-	
+
 	public ProductStock(int id, int productid, Date transactiondate, String vendor, String batchcode,
 			String invoicenumber, int quantity, String transactiontype) {
 		super();
-		
-		this.id=id;
-		this.productid=productid;
-		this.transactiondate=transactiondate;
-		this.vendor=vendor;
-		this.batchcode=batchcode;
-		this.invoicenumber=invoicenumber;
-		this.quantity=quantity;
-		this.transactiontype=transactiontype;
+
+		this.id = id;
+		this.productid = productid;
+		this.transactiondate = transactiondate;
+		this.vendor = vendor;
+		this.batchcode = batchcode;
+		this.invoicenumber = invoicenumber;
+		this.quantity = quantity;
+		this.transactiontype = transactiontype;
 	}
 
 	public int getId() {
@@ -113,6 +113,5 @@ public class ProductStock {
 	public void setTransactiontype(String transactiontype) {
 		this.transactiontype = transactiontype;
 	}
-	
-	
+
 }

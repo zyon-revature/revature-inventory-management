@@ -7,11 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
-@Entity (name="product")
+@Entity(name = "product")
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
-    @SequenceGenerator(name="id_generator", sequenceName = "product_id_seq", allocationSize = 1)
+	@SequenceGenerator(name = "id_generator", sequenceName = "product_id_seq", allocationSize = 1)
 	private int id;
 	@Column
 	private String title;
@@ -21,19 +21,19 @@ public class Product {
 	private String manufacturer;
 	@Column
 	private int minlimit;
-	
+
 	public Product() {
 		super();
 	}
-	
+
 	public Product(int id, String title, String category, String manufacturer, int minlimit) {
 		super();
-		
-		this.id=id;
-		this.title=title;
-		this.category=category;
-		this.manufacturer=manufacturer;
-		this.minlimit=minlimit;
+
+		this.id = id;
+		this.title = title;
+		this.category = category;
+		this.manufacturer = manufacturer;
+		this.minlimit = minlimit;
 	}
 
 	public int getId() {
@@ -75,6 +75,5 @@ public class Product {
 	public void setMinlimit(int minlimit) {
 		this.minlimit = minlimit;
 	}
-	
-	
+
 }

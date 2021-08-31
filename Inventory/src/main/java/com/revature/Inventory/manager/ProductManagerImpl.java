@@ -10,14 +10,14 @@ import com.revature.Inventory.model.Product;
 
 @Service
 @Transactional
-public class ProductManagerImpl implements ProductManager{
+public class ProductManagerImpl implements ProductManager {
 
 	@Autowired
 	private ProductDao dao;
-	
+
 	@Override
 	public Product create(Product p) {
-		
+
 		return dao.save(p);
 	}
 

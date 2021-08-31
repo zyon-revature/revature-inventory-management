@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ProductService } from '../product.service';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Product } from '../product';
 
 @Component({
@@ -24,7 +24,7 @@ export class NewProductComponent implements OnInit {
   constructor(private router:Router, private productService: ProductService,
               private http:HttpClient) { }
 
-              public _url = "http://localhost:8080/newproduct"
+              public _url = "http://localhost:8080/product"
 
   ngOnInit(): void {
   }
@@ -55,4 +55,11 @@ export class NewProductComponent implements OnInit {
       }})
 }
 
+
+}
+
+class ValidationController{
+  submit(){
+      alert('Submit ${this.product}');
+  }
 }
