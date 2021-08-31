@@ -1,0 +1,15 @@
+h3{
+    text-align: center;
+}
+input, select{
+    width: 200px;
+}
+.container {
+    width: 500px;
+    clear: both;
+}
+.container input, select{
+    width: 100%;
+    clear:both;
+}
+
