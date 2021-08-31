@@ -1,5 +1,9 @@
 package com.revature.Inventory.manager;
 
-public interface ProductManager {
+import java.util.List;
 
+import com.revature.Inventory.model.Product;
+
+public interface ProductManager {
+	List<Product> findAll();
 }

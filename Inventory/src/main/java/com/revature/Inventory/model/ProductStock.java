@@ -2,23 +2,28 @@ package com.revature.Inventory.model;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
+import lombok.Getter;
+import lombok.Setter;
+
+
 @Entity (name="productstock")
-public class ProductStock {
+public class ProductStock{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
     @SequenceGenerator(name="id_generator", sequenceName = "productstock_id_seq", allocationSize = 1)
-	
 	private int id;
-	@Column
-	private int productid;
+
 	@Column
 	private Date transactiondate;
 	@Column
@@ -32,23 +37,27 @@ public class ProductStock {
 	@Column
 	private String transactiontype;
 	
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "productid")
+	private @Getter @Setter Product product;
+	
 	public ProductStock() {
 		super();
 	}
 	
-	public ProductStock(int id, int productid, Date transactiondate, String vendor, String batchcode,
-			String invoicenumber, int quantity, String transactiontype) {
+public ProductStock(int id, Date transactiondate, String vendor, String batchcode, String invoicenumber,
+			int quantity, String transactiontype) {
 		super();
-		
-		this.id=id;
-		this.productid=productid;
-		this.transactiondate=transactiondate;
-		this.vendor=vendor;
-		this.batchcode=batchcode;
-		this.invoicenumber=invoicenumber;
-		this.quantity=quantity;
-		this.transactiontype=transactiontype;
+		this.id = id;
+		this.transactiondate = transactiondate;
+		this.vendor = vendor;
+		this.batchcode = batchcode;
+		this.invoicenumber = invoicenumber;
+		this.quantity = quantity;
+		this.transactiontype = transactiontype;
 	}
+
 
 	public int getId() {
 		return id;
@@ -56,14 +65,6 @@ public class ProductStock {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public int getProductid() {
-		return productid;
-	}
-
-	public void setProductid(int productid) {
-		this.productid = productid;
 	}
 
 	public Date getTransactiondate() {
@@ -113,6 +114,8 @@ public class ProductStock {
 	public void setTransactiontype(String transactiontype) {
 		this.transactiontype = transactiontype;
 	}
+
+	
 	
 	
 }
