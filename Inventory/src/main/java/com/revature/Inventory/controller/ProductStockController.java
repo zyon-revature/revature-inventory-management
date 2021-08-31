@@ -19,7 +19,7 @@ import com.revature.Inventory.model.ProductStock;
 @RequestMapping(path= "/stocks")
 public class ProductStockController {
 
-	@Autowired(required = true)
+	@Autowired()
 	private ProductStockManager manager;
 	
 	@GetMapping(produces = "application/json")
