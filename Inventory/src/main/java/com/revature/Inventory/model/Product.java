@@ -2,24 +2,25 @@ package com.revature.Inventory.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import javax.persistence.SequenceGenerator;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity(name = "product")
-public class Product {
+@Entity (name="product")
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
@@ -33,6 +34,7 @@ public class Product {
 	private String manufacturer;
 	@Column
 	private int minlimit;
+
 
 //	@OneToOne
 //	private ProductStock productStocks;
@@ -89,4 +91,5 @@ public class Product {
 	public void setMinlimit(int minlimit) {
 		this.minlimit = minlimit;
 	}
+
 }

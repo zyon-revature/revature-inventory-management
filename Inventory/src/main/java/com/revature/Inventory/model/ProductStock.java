@@ -12,11 +12,19 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "productstock")
-public class ProductStock {
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity (name="productstock")
+public class ProductStock{
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
@@ -39,6 +47,7 @@ public class ProductStock {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "productid")
 	private @Getter @Setter Product product;
+
 
 	public ProductStock() {
 		super();
