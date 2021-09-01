@@ -6,8 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.revature.Inventory.model.ProductStock;
+import com.revature.Inventory.model.Threshold;
 
-import jdk.jfr.Threshold;
+
 
 
 
