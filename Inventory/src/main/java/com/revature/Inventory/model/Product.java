@@ -18,7 +18,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-
 @Entity(name = "product")
 public class Product {
 
