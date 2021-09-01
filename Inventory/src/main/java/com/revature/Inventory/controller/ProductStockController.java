@@ -17,16 +17,12 @@ import com.revature.Inventory.model.Threshold;
 
 
 @RestController
-@RequestMapping(path= "/stocks")
+@RequestMapping(path= "/productstocks")
 public class ProductStockController {
 
 	@Autowired()
 	private ProductStockManager manager;
 	
-	@GetMapping(produces = "application/json")
-	public List<ProductStock> getAllProductStocks(){
-		return manager.findAll();
-	}
 	
 	@GetMapping(path = "/demand" ,produces = "application/json")
 	public List<Threshold> Demand(){

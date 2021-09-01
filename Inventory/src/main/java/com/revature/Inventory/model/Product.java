@@ -2,23 +2,19 @@ package com.revature.Inventory.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import javax.persistence.SequenceGenerator;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
+
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-
 @Entity (name="product")
 public class Product{
 
@@ -35,64 +31,4 @@ public class Product{
 	private String manufacturer;
 	@Column
 	private int minlimit;
-	
-//	@OneToOne
-//	private ProductStock productStocks;
-
-	public Product() {
-		super();
-	}
-	
-	public Product(int id, String title, String category, String manufacturer, int minlimit) {
-		super();
-		this.id=id;
-		this.title=title;
-		this.category=category;
-		this.manufacturer=manufacturer;
-		this.minlimit=minlimit;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
-
-	public String getManufacturer() {
-		return manufacturer;
-	}
-
-	public void setManufacturer(String manufacturer) {
-		this.manufacturer = manufacturer;
-	}
-
-	public int getMinlimit() {
-		return minlimit;
-	}
-
-	public void setMinlimit(int minlimit) {
-		this.minlimit = minlimit;
-	}
-	
-	
-	
-	
 }

@@ -12,10 +12,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity (name="productstock")
 public class ProductStock{
 
@@ -41,81 +46,5 @@ public class ProductStock{
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "productid")
 	private @Getter @Setter Product product;
-	
-	public ProductStock() {
-		super();
-	}
-	
-public ProductStock(int id, Date transactiondate, String vendor, String batchcode, String invoicenumber,
-			int quantity, String transactiontype) {
-		super();
-		this.id = id;
-		this.transactiondate = transactiondate;
-		this.vendor = vendor;
-		this.batchcode = batchcode;
-		this.invoicenumber = invoicenumber;
-		this.quantity = quantity;
-		this.transactiontype = transactiontype;
-	}
-
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public Date getTransactiondate() {
-		return transactiondate;
-	}
-
-	public void setTransactiondate(Date transactiondate) {
-		this.transactiondate = transactiondate;
-	}
-
-	public String getVendor() {
-		return vendor;
-	}
-
-	public void setVendor(String vendor) {
-		this.vendor = vendor;
-	}
-
-	public String getBatchcode() {
-		return batchcode;
-	}
-
-	public void setBatchcode(String batchcode) {
-		this.batchcode = batchcode;
-	}
-
-	public String getInvoicenumber() {
-		return invoicenumber;
-	}
-
-	public void setInvoicenumber(String invoicenumber) {
-		this.invoicenumber = invoicenumber;
-	}
-
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
-	public String getTransactiontype() {
-		return transactiontype;
-	}
-
-	public void setTransactiontype(String transactiontype) {
-		this.transactiontype = transactiontype;
-	}
-
-	
-	
 	
 }
