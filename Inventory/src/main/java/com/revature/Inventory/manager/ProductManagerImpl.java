@@ -1,6 +1,5 @@
 package com.revature.Inventory.manager;
 
-import javax.transaction.Transactional;
 
 import javax.transaction.Transactional;
 import java.util.List;
