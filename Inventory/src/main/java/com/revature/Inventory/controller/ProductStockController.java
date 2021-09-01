@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.Inventory.manager.ProductStockManager;
 import com.revature.Inventory.model.ProductStock;
+import com.revature.Inventory.model.Threshold;
 
 
 
@@ -25,5 +26,15 @@ public class ProductStockController {
 	@GetMapping(produces = "application/json")
 	public List<ProductStock> getAllProductStocks(){
 		return manager.findAll();
+	}
+	
+	@GetMapping(path = "/demand" ,produces = "application/json")
+	public List<Threshold> Demand(){
+		return manager.findDemand();
+	}
+	
+	@GetMapping(path = "/demand/all" ,produces = "application/json")
+	public List<Threshold> AllDemand(){
+		return manager.findAllDemand();
 	}
 }
