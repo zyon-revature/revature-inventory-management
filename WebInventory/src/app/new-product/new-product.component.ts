@@ -57,9 +57,3 @@ export class NewProductComponent implements OnInit {
 
 
 }
-
-class ValidationController{
-  submit(){
-      alert('Submit ${this.product}');
-  }
-}

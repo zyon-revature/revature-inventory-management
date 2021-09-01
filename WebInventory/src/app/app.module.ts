@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
   {path: '', component:NewProductComponent}
@@ -14,7 +15,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NewProductComponent
+    NewProductComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
