@@ -16,7 +16,7 @@ public class Product {
 	private int id;
 	@Column
 	private String title;
-	@Column
+	@Column(name="category")
 	private String category;
 	@Column
 	private String manufacturer;
@@ -26,6 +26,7 @@ public class Product {
 	public Product() {
 		super();
 	}
+	
 	
 	public Product(int id, String title, String category, String manufacturer, int minlimit) {
 		super();
