@@ -36,7 +36,6 @@ public class Product {
 
 //	@OneToOne
 //	private ProductStock productStocks;
-
 	public Product() {
 		super();
 	}
