@@ -16,7 +16,7 @@ public class Product {
 	private int id;
 	@Column
 	private String title;
-	@Column(name="category")
+	@Column
 	private String category;
 	@Column
 	private String manufacturer;
@@ -27,8 +27,12 @@ public class Product {
 		super();
 	}
 	
+	public Product(String category) {
+		super();
+		this.category=category;
+	}
 	
-	public Product(int id, String title, String category, String manufacturer, int minlimit) {
+	public Product(int id,String title, String category, String manufacturer, int minlimit) {
 		super();
 		
 		this.id=id;
@@ -78,5 +82,9 @@ public class Product {
 		this.minlimit = minlimit;
 	}
 	
+	@Override
+	public String toString() {
+		return "["+this.category+"]";
+	}
 	
 }

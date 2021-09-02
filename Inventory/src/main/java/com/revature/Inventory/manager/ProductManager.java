@@ -2,14 +2,16 @@ package com.revature.Inventory.manager;
 
 import java.util.List;
 
-import com.revature.Inventory.model.GetCategory;
+
 import com.revature.Inventory.model.Product;
 
 public interface ProductManager {
 
-	List<Product> findAllProducts();
-	List<Product> findProductCategoryById();
-	List<GetCategory> fetchProductByCategory();
+	List<Product> findAllCategories();
+	List<Product> findByCategory(String category);
 	
- 	List<Product> findAllProductsByCategory(String category);
+	//List<Product> fetchProductByCategory();
+	//List<GetCategory> getCategories();
+	//List<Product> getProductsByCategory(String category);
+ 
 }

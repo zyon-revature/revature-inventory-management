@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.Inventory.dao.ProductDao;
-import com.revature.Inventory.model.GetCategory;
+
 import com.revature.Inventory.model.Product;
 
 @Service
@@ -18,41 +18,36 @@ public class ProductManagerImpl implements ProductManager{
 	private ProductDao dao;
 	
 	@Override
-	public List<Product> findAllProducts() {
+	public List<Product> findAllCategories() {
 		
 		return StreamSupport.stream(dao.findAll().spliterator(), false)
 				.collect(Collectors.toList());
 	}
+	
+	@Override
+	public List<Product> findByCategory(String category) {
+		System.out.println(category);
+		return dao.findByCategory(category);
+	}
+
 
 	/*@Override
-	public List<Object[]> findProductByCategory() {
-		
-		return dao.getCategory();
+	public List<Product> fetchProductByCategory() {
+		// TODO Auto-generated method stub
+		return null;//dao.fetchProductByCategory();
+	}
+
+
+	@Override
+	public List<GetCategory> getCategories() {
+		// TODO Auto-generated method stub
+		return null;//dao.getCategories();
+	}
+
+	@Override
+	public List<Product> getProductsByCategory(String category) {
+		// TODO Auto-generated method stub
+		return null;//dao.getProductsByCategory(category);
 	}*/
 
-	@Override
-	public List<Product> findProductCategoryById() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	/*this will most likely be deleted later
-	 * @Override
-	public List<Product> findAllProductsByCategory(String category) {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
-
-
-	@Override
-	public List<Product> findAllProductsByCategory(String category) {
-		
-		return dao.getProductsByCategory(category);
-	}
-
-	@Override
-	public List<GetCategory> fetchProductByCategory() {
-		// TODO Auto-generated method stub
-		return dao.fetchProductByCategory();
-	}
 }
