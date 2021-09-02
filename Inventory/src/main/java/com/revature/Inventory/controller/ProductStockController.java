@@ -24,13 +24,13 @@ public class ProductStockController {
 	private ProductStockManager manager;
 	
 	
-	@GetMapping(path = "/demand" ,produces = "application/json")
-	public List<Threshold> Demand(){
-		return manager.findDemand();
+	@GetMapping(path = "/threshold" ,produces = "application/json")
+	public List<Threshold> getDemand(){
+		return manager.findThreshold();
 	}
 	
-	@GetMapping(path = "/demand/all" ,produces = "application/json")
-	public List<Threshold> AllDemand(){
-		return manager.findAllDemand();
+	@GetMapping(path = "/threshold/all" ,produces = "application/json")
+	public List<Threshold> getAllDThreshold(){
+		return manager.findAllThreshold();
 	}
 }

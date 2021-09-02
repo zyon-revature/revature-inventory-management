@@ -17,13 +17,13 @@ public class ProductStockManagerImpl implements ProductStockManager{
 	private ProductStockDao dao;
 
 	@Override
-	public List<Threshold> findAllDemand() {
-		return dao.findAllDemand();
+	public List<Threshold> findAllThreshold() {
+		return dao.findAllThreshold();
 	}
 	
 	@Override
-	public List<Threshold> findDemand() {
-		return dao.findDemand();
+	public List<Threshold> findThreshold() {
+		return dao.findThreshold();
 	}
 	
 	
