@@ -6,7 +6,7 @@ values ('Canned Beans', 'Canned Goods', 'Franks', 8),
 
 -- stocks
 
-insert into inventory.productStock (productId, vendor, batchCode, invoiceNumber, quantity, transactionType)
+insert into inventory.productStock (productId, vendor, batchCode, invoiceNumber, quantity, transactionType) 
 values (1, 'Tim Warehouse', 'ABC123', 'AUG101', 10, 'IN'),
        (2, 'Tim Warehouse', 'ABC123', 'AUG102', 10, 'IN'),
        (3, 'Tim Warehouse', 'ABC123', 'AUG103', 2, 'IN');
