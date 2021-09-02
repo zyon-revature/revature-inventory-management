@@ -1,0 +1,41 @@
+<h3> Please enter information below for new ticket</h3>
+<p></p>
+<div class="container" ng-app="app" ng-controller="ctrl">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+            <div class="form-floating">
+                <input id="title" class="form-control" type="text" name="title" 
+                placeholder="Name of Product" required ngModel>
+                <label for="title">Product Name</label>
+                </div>
+            </div>
+        <p></p>
+        <div>
+                <select name="category" class= "form-select" id="selections" required ngModel>
+                    <option selected="selected" value="" >Select a category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Home Decor">Home Decor</option>
+                </select>
+        </div>
+        <p></p>
+        <div class="form-group">
+        <div class="form-floating">
+            <input class="form-control" id= "manufacturer" type="text" name="manufacturer" placeholder="Manufacturer" required ngModel>
+            <label for="manufacturer">Manufacturer</label>
+        </div>
+        <p></p>
+        <div class="form-floating">
+            <input class="form-control" id="minlimit" type="number" name="minlimit" placeholder="Minimum" required ngModel>
+            <label for="minlimit">Minimum Limit</label>
+        </div>
+        <p></p>
+    </div>
+    <div class="form-actions">
+        <button type="submit" [disabled]="f.invalid" class="btn btn-success">Submit Product</button>
+    </div>
+    </form>
+    <div class="movement">
+        <button type="button" class="btn btn-secondary">Go Back</button>
+    </div>
+</div>

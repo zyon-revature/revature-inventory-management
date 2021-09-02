@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    background-color: #e83e8c;
+}
+.container {
+    width: 50vw;
+    clear: both;
+    border-radius: 40px;
+}
+.navbar{
+    border-radius: 40px;
+}
+
