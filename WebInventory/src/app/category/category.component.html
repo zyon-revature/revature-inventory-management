@@ -1,0 +1,32 @@
+<h2>Categories</h2>
+
+<!--Add column or drop down. Based on decision made in drop down or Input, take that and show the 
+specifc or requested category-->
+
+<div class="input-group">
+    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+      <option selected>Choose...</option>
+      <option value="1">Electronics</option>
+      <option value="2">Appliances</option>
+      <option value="3">Home Decor</option>
+    </select>
+    <button class="btn btn-outline-secondary" type="button">Search</button>
+  </div>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Manufacturer</th>
+        <th>Minimum Limit</th><!--min limit available?-->
+    </tr>
+
+    <tr>
+        <td><div *ngFor="let d of data">{{d.id}}</div></td>
+        <td><div *ngFor="let d of data">{{d.title}}</div></td>
+        <td><div *ngFor="let d of data">{{d.category}}</div></td>
+        <td><div *ngFor="let d of data">{{d.manufacturer}}</div></td>
+        <td><div *ngFor="let d of data">{{d.minlimit}}</div></td>
+    </tr>
+</table>
