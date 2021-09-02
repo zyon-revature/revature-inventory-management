@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ProductService } from '../product.service';
-import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Product } from '../product';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-new-product',
@@ -20,9 +21,10 @@ export class NewProductComponent implements OnInit {
     manufacturer: "",
     minlimit: 0
   }
+  
 
   constructor(private router:Router, private productService: ProductService,
-              private http:HttpClient) { }
+              private http:HttpClient, private location: Location) { }
 
               public _url = "http://localhost:8080/product"
 
@@ -54,6 +56,9 @@ export class NewProductComponent implements OnInit {
         }
       }})
 }
+ goBack(): void{
+  this.location.back();
+ }
 
 
 }

@@ -16,5 +16,11 @@ input, select{
     color: red;
     font-family:cursive
 }
+form .form-actions{
+    text-align: center;
+}
+.movement{
+    text-align: center;
+}
 
 
