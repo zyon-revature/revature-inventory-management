@@ -1,0 +1,19 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Demand</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container>
+        <tr *ngFor="let threshold of thresholds">
+          <td>{{threshold.title}}</td>
+          <td>{{threshold.demand}}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+

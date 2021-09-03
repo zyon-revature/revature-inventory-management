@@ -23,7 +23,7 @@ public interface ProductStockDao extends JpaRepository<ProductStock, Integer>{
 	@Query("SELECT p.title AS title, (p.minlimit - ps.quantity) AS demand FROM productstock ps INNER JOIN ps.product p")
 	List<Threshold> findAllThreshold();
 	
-	@Query("SELECT p.title AS title, (p.minlimit - ps.quantity) AS demand FROM productstock ps INNER JOIN ps.product p WHERE p.minlimit > ps.quantity")
+	@Query("SELECT p.title AS title, (p.minlimit - ps.quantity) AS demand FROM productstock ps INNER JOIN ps.product p WHERE p.minlimit > ps.quantity ORDER BY title ASC")
 	List<Threshold> findThreshold();
 	
 	
