@@ -19,7 +19,7 @@ import com.revature.Inventory.manager.ProductManager;
 import com.revature.Inventory.model.Product;
 
 @RestController
-@RequestMapping(path="/products")
+@RequestMapping(path="/categories")
 public class ProductController {
 	
 	@Autowired
