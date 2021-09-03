@@ -6,7 +6,7 @@ import com.revature.Inventory.model.Threshold;
 
 public interface ProductStockManager {
 
-	List<Threshold> findAllDemand();
+	List<Threshold> findAllThreshold();
 	
-	List<Threshold> findDemand();
+	List<Threshold> findThreshold();
 }
