@@ -14,7 +14,7 @@ export class CategoryComponent implements OnInit {
   data:any=[];//might change this to category or something to reflect that
   selectedData?: Data;
 
-  public _url="";//place url here to test
+  public _url="http://localhost:8080/categories";//place url here to test
   constructor(
     private router: Router,
     private http: HttpClient
