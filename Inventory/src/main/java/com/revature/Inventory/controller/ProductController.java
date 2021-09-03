@@ -25,7 +25,6 @@ public class ProductController {
 	@Autowired
 	private ProductManager manager;
 	
-	//test
 	@GetMapping(produces = "application/json")
 	public List<Product> getAllCatgories(){
 		return manager.findAllCategories();
@@ -49,25 +48,5 @@ public class ProductController {
 		});
 		return errors;
 	}
-	
-	
-	
-	/*@GetMapping(path="/{category}", produces="application/json")
-	public List<Product> getProductsByCategory(@PathVariable String category){
-		
-		return manager.getProductsByCategory(category);
-	}
-	
-	//query method. Delete this method if new method works which it should
-	/*@GetMapping(path ="/{category}",produces = "application/json")//need to place the path id, either "/{category}" or "/category"
-	public List<Product> getAllProductsByCategoryInput(@PathVariable String category){
-		return manager.findAllProductsByCategory(category);
-	}*/
-	
-	/*//categories
-	@GetMapping(path="/categories", produces="application/json")
-	public List<Product> getAllProductsByCategory(){
-		return manager.fetchProductByCategory();
-	}*/
 
 }

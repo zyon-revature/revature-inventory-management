@@ -9,9 +9,5 @@ public interface ProductManager {
 
 	List<Product> findAllCategories();
 	List<Product> findByCategory(String category);
-	
-	//List<Product> fetchProductByCategory();
-	//List<GetCategory> getCategories();
-	//List<Product> getProductsByCategory(String category);
  
 }

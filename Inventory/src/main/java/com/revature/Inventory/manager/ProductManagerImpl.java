@@ -30,24 +30,4 @@ public class ProductManagerImpl implements ProductManager{
 		return dao.findByCategory(category);
 	}
 
-
-	/*@Override
-	public List<Product> fetchProductByCategory() {
-		// TODO Auto-generated method stub
-		return null;//dao.fetchProductByCategory();
-	}
-
-
-	@Override
-	public List<GetCategory> getCategories() {
-		// TODO Auto-generated method stub
-		return null;//dao.getCategories();
-	}
-
-	@Override
-	public List<Product> getProductsByCategory(String category) {
-		// TODO Auto-generated method stub
-		return null;//dao.getProductsByCategory(category);
-	}*/
-
 }
