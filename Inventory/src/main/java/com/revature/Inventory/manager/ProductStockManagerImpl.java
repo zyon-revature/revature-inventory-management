@@ -9,22 +9,28 @@ import javax.validation.Valid;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+<<<<<<< Updated upstream
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
+=======
+>>>>>>> Stashed changes
 import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.Inventory.dao.ProductStockDao;
 import com.revature.Inventory.model.ProductStock;
-import com.revature.Inventory.model.Threshold;
+
 
 
 @Service
+@Transactional
 public class ProductStockManagerImpl implements ProductStockManager{
 	
+
 	@Autowired
 	private ProductStockDao dao;
 	
 	@Override
+<<<<<<< Updated upstream
 	@Transactional(readOnly = true, propagation = Propagation.NEVER)
 	public List<ProductStock> findAll() {
 		return StreamSupport.stream(dao.findAll().spliterator(), false).collect(Collectors.toList());
@@ -48,18 +54,22 @@ public class ProductStockManagerImpl implements ProductStockManager{
 		return null;
 	}
 
+=======
+	public List<ProductStock> findAll() {
+		return StreamSupport.stream(dao.findAll().spliterator(), false).collect(Collectors.toList());
+	}
+>>>>>>> Stashed changes
 
 	@Override
-	public List<Threshold> findAllThreshold() {
-		return dao.findAllThreshold();
+	public ProductStock findById(int id) {
+		return dao.findById(Integer.valueOf(id)).get();
 	}
-	
+
 	@Override
-	public List<Threshold> findThreshold() {
-		return dao.findThreshold();
+	public ProductStock create(ProductStock ps) {
+		return dao.save(ps);
 	}
-	
-	
+
 
 
 }

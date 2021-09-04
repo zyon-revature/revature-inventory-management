@@ -7,8 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.revature.Inventory.model.ProductStock;
-import com.revature.Inventory.model.Threshold;
-
 
 
 
@@ -16,6 +14,7 @@ import com.revature.Inventory.model.Threshold;
 
 public interface ProductStockDao extends JpaRepository<ProductStock, Integer>{
 	
+<<<<<<< Updated upstream
 	@Query(value = "select ps from ProductStock ps where ps.id = :productid")
 	public ProductStock findById(@Param("productid") int id);
 	
@@ -43,7 +42,12 @@ public interface ProductStockDao extends JpaRepository<ProductStock, Integer>{
 
 	@Query("SELECT p.title AS title, (p.minlimit - ps.quantity) AS demand FROM productstock ps INNER JOIN ps.product p WHERE p.minlimit > ps.quantity ORDER BY title ASC")
 	List<Threshold> findAllThreshold();
+=======
+	@Query("select ps from productstock ps where ps.id = :productId")
+	public ProductStock findById(@Param("productId") int id);
+>>>>>>> Stashed changes
 
+	public List<ProductStock> findAll();
 
 	
 	

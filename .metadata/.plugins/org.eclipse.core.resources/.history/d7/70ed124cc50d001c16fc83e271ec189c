@@ -1,0 +1,18 @@
+package com.revature.Inventory.manager;
+
+
+import com.revature.Inventory.model.Product;
+import com.revature.Inventory.model.ProductStock;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+public interface ProductManager {
+	public Product create(@Valid ProductStock ps);
+	List<Product> findAll();
+	public static Product findById(@Valid ProductStock ps) {
+		return null;
+	}
+
+}

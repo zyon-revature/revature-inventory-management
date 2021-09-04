@@ -2,6 +2,7 @@ package com.revature.Inventory.manager;
 
 import java.util.List;
 
+<<<<<<< Updated upstream
 import javax.validation.Valid;
 
 import com.revature.Inventory.model.ProductStock;
@@ -16,8 +17,18 @@ public interface ProductStockManager {
     ProductStock create(ProductStock ps);
 
     ProductStock update(@Valid ProductStock ps);
+=======
 
-	List<Threshold> findAllThreshold();
+import com.revature.Inventory.model.ProductStock;
+
+>>>>>>> Stashed changes
+
+public interface ProductStockManager {
 	
-	List<Threshold> findThreshold();
+	List<ProductStock> findAll();
+	
+	ProductStock findById(int id);
+	
+	ProductStock create(ProductStock ps);
+
 }

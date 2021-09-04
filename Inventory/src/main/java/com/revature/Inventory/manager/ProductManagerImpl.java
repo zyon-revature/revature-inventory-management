@@ -15,6 +15,7 @@ import com.revature.Inventory.model.Product;
 @Transactional
 public class ProductManagerImpl implements ProductManager {
 
+
 	@Autowired
 	private ProductDao dao;
 
@@ -30,5 +31,6 @@ public class ProductManagerImpl implements ProductManager {
 				.collect(Collectors.toList());
 
 	}
+
 
 }
