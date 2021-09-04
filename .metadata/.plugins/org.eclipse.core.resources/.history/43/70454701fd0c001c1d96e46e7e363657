@@ -1,0 +1,61 @@
+package com.revature.Inventory.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.util.Date;
+
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity (name="productstock")
+public class ProductStock{
+
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
+	@SequenceGenerator(name = "id_generator", sequenceName = "productstock_id_seq", allocationSize = 1)
+	private int id;
+	@JoinColumn(name = "productid", nullable = false)
+	private Product productId;
+	@Column
+	private Date transactiondate;
+	@Column
+	private String vendor;
+	@Column
+	private String batchcode;
+	@Column
+	private String invoicenumber;
+	@Column
+	private int quantity;
+	@Column
+	private String transactiontype;
+
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "productid")
+	private Product product;
+	
+	public ProductStock(int id, String vendor, String batchCode,String invoiceNumber,
+		int quantity, String transactionType) {
+		this.batchcode = batchCode;
+		this.invoicenumber = invoiceNumber;
+		this.productId.setId(id);
+		this.quantity = quantity;
+		this.transactiontype = transactionType;
+		this.vendor = vendor;
+	}
+
+
+	@Override
+	public String toString() {
+		return "ProductStock [id=" + id + ", productId=" + productId + ", transactionDate=" + transactiondate
+				+ ", vendor=" + vendor + ", batchCode=" + batchcode + ", invoiceNumber=" + invoicenumber + ", quantity="
+				+ quantity + ", transactionType=" + transactiontype + "]";
+	}
+
+
+}
