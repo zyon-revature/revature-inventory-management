@@ -14,7 +14,7 @@ import {ThresholdService} from "../threshold.service";
 export class CheckThresholdComponent implements OnInit {
   thresholds: Threshold[] =[];
 
-  constructor(private thresholdService: ThresholdService) {}
+  constructor(private thresholdService: ThresholdService, private location: Location) {}
 
   getThreshold(): void{
     // let resp = this.http.get("http://localhost:8080/productstocks/threshold");
@@ -32,5 +32,8 @@ export class CheckThresholdComponent implements OnInit {
   ngOnInit(): void{
     this.getThreshold();
   }
+  goBack(): void{
+    this.location.back();
+   }
 
 }
