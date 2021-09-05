@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.Inventory.dao.ProductStockDao;
 import com.revature.Inventory.model.ProductStock;
+import com.revature.Inventory.model.Threshold;
 
 import java.util.stream.Collectors;
 
