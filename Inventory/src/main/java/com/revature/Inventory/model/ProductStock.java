@@ -109,9 +109,4 @@ public class ProductStock{
 	}
 
 
-
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "productid")
-	private Product product;
-
 }
