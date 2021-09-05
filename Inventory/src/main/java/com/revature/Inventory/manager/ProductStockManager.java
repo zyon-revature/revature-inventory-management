@@ -3,7 +3,7 @@ package com.revature.Inventory.manager;
 import java.util.List;
 
 import com.revature.Inventory.model.ProductStock;
-import com.revature.Inventory.model.Threshold;
+//import com.revature.Inventory.model.Threshold;
 
 public interface ProductStockManager {
 	
@@ -12,8 +12,10 @@ public interface ProductStockManager {
 	ProductStock findById(int id);
 	
 	ProductStock create(ProductStock ps);
-
-	List<Threshold> findAllThreshold();
 	
-	List<Threshold> findThreshold();
+	ProductStock update(ProductStock ps);
+
+//	List<Threshold> findAllThreshold();
+//	
+//	List<Threshold> findThreshold();
 }

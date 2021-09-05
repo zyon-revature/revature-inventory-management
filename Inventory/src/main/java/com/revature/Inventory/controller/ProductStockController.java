@@ -6,9 +6,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+import javax.validation.ConstraintViolationException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -19,8 +20,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.ConstraintViolationException;
-import org.springframework.http.HttpStatus;
 import com.revature.Inventory.manager.ProductStockManager;
 import com.revature.Inventory.model.ProductStock;
 
@@ -34,15 +33,24 @@ public class ProductStockController {
 	@Autowired
 	private ProductStockManager manager;
 	
+
+	
 	@GetMapping(produces = "application/json")
 	public List<ProductStock> getAllInvoices(){
 		return manager.findAll();
 	}
 	
 	@PostMapping(path = "/create/{id}", consumes = "application/json", produces = "application/json")
-	public ProductStock create(@RequestBody ProductStock p) {
-		return manager.create(p);
+	public ProductStock create(@RequestBody ProductStock ps) {
+		return manager.create(ps);
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	@ExceptionHandler(MethodArgumentNotValidException.class)
