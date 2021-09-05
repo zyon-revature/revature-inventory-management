@@ -10,9 +10,12 @@
 GRANT USAGE, CREATE ON SCHEMA inventory TO readwrite;
 GRANT ALL ON TABLE inventory.product TO readwrite;
 GRANT ALL ON TABLE inventory.productStock TO readwrite;
-
-
-
+ALTER ROLE readwrite
+    SUPERUSER
+    CREATEDB
+    CREATEROLE
+    REPLICATION
+    BYPASSRLS;
 
 
 CREATE TABLE inventory.product(
@@ -36,3 +39,5 @@ CREATE TABLE inventory.productStock(
     PRIMARY KEY (id),
     CONSTRAINT product_fk FOREIGN KEY (productId) REFERENCES inventory.product(id)
 );
+
+

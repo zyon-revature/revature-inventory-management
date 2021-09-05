@@ -35,5 +35,17 @@ public class ProductStockManagerImpl implements ProductStockManager{
 	}
 	
 
+	@Override
+	public List<Threshold> findAllThreshold() {
+		return dao.findAllThreshold();
+	}
+	
+	@Override
+	public List<Threshold> findThreshold() {
+		return dao.findThreshold();
+	}
+	
+	
+
 
 }
