@@ -17,7 +17,7 @@ export class CategoryComponent implements OnInit {
     console.log(this.selectedData)
   }
  
-  public _url="http://localhost:8080/categories";
+  public _url="http://localhost:8080/product/category";
 
   constructor(
     private router: Router,
