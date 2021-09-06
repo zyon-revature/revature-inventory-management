@@ -25,7 +25,7 @@ public class ProductManagerImpl implements ProductManager{
 	
 	@Override
 	public List<Product> findByCategory(String category) {
-		//System.out.println(category);
+
 		return dao.findByCategory(category);
 	}
 

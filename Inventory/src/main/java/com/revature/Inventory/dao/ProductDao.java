@@ -10,7 +10,6 @@ import com.revature.Inventory.model.Product;
 @Repository
 public interface ProductDao extends JpaRepository<Product, Integer>{
 
-	
 	List<Product> findByCategory(String category);
 
 }
