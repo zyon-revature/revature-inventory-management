@@ -25,9 +25,9 @@ export class NewStockComponent implements OnInit {
     console.log(invoiceForm)
 
     this.http.post(this.url, JSON.stringify({
-      product_id:invoiceForm.value.productId, vendor:invoiceForm.value.vendor, 
-      batch_code:invoiceForm.value.batchCode, invoice_number:invoiceForm.value.invoiceNum, 
-      quantity:invoiceForm.value.quantity, transaction_type:invoiceForm.value.transactionType
+      productid:invoiceForm.value.productId, vendor:invoiceForm.value.vendor, 
+      batchcode:invoiceForm.value.batchCode, invoicenumber:invoiceForm.value.invoiceNum, 
+      quantity:invoiceForm.value.quantity, transactiontype:invoiceForm.value.transactionType
     }), httpOptions
     ).subscribe({
       next: (data) => {

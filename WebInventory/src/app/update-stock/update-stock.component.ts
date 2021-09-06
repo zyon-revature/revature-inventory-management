@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class UpdateStockComponent implements OnInit {
 
-  public url='http://localhost:8080/productstock/invoices';
+  public url='http://localhost:8080/productstock/stocks';
 
   invoices:any = [];
 

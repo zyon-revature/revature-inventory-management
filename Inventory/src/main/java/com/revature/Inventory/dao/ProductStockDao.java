@@ -20,7 +20,6 @@ public interface ProductStockDao extends JpaRepository<ProductStock, Integer>{
 	@Query("select ps from productstock ps where ps.id = :productId")
 	public ProductStock findById(@Param("productId") int id);
 
-	public List<ProductStock> findAll();
 	
 	@Query("SELECT ps FROM productstock ps")
 	public List<ProductStock> findAllProductStocks();

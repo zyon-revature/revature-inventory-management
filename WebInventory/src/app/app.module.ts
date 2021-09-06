@@ -13,7 +13,8 @@ import { NewStockComponent } from './new-stock/new-stock.component';
 
 const routes: Routes = [
   {path: '', component:NewProductComponent},
-  {path: 'createstock', component: NewStockComponent}
+  {path: 'createstock', component: NewStockComponent},
+  {path: 'updatestock', component: UpdateStockComponent}
 ]
 
 @NgModule({

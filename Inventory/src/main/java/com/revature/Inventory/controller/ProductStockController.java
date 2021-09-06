@@ -35,8 +35,8 @@ public class ProductStockController {
 	
 
 	
-	@GetMapping(path="/invoices", produces = "application/json", consumes = "application/json")
-	public List<ProductStock> getAllInvoices(){
+	@GetMapping(path="/stocks", produces = "application/json", consumes = "application/json")
+	public List<ProductStock> getAllStocks(){
 		return manager.findAll();
 	}
 	

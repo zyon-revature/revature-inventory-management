@@ -1,9 +1,12 @@
 export interface ProductStock {
 
     id: number;
-    title: string;
-    category: string;
-    manufacturer: string;
-    
+    productid: number;
+    transactiondate: Date;
+    vendor: string;
+    batchcode: string;
+    invoicenumber: string;
+    quantity: number;
+    transactiontype: string;
 
 }
