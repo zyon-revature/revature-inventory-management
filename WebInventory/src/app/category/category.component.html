@@ -1,0 +1,9 @@
+<h2>Categories</h2>
+
+<select [(ngModel)] = "selectedData" (change) = "selected()">
+    <option *ngFor = "let d of data" [ngValue] = "d">
+        {{d.category}}
+    </option>
+</select>
+
+{{selectedData | json}}

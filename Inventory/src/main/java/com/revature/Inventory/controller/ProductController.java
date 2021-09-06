@@ -1,6 +1,8 @@
 package com.revature.Inventory.controller;
 
+
 import java.util.List;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.validation.Valid;
 
@@ -17,6 +19,20 @@ import com.revature.Inventory.model.Product;
 @RestController
 @RequestMapping(path = "/product")
 public class ProductController {
+	
+	@Autowired
+	private ProductManager manager;
+	
+	@GetMapping(path="/category", produces = "application/json")
+	public List<Product> getAllCatgories(){
+		return manager.findAllCategories();
+	}
+	 
+	@GetMapping(path="/{category}",produces="application/json")
+	public List<Product> getCategories(@PathVariable String category) {
+		System.out.println(category);
+		return manager.findByCategory(category);
+	}
 
 	@Autowired
 	private ProductManager manager;

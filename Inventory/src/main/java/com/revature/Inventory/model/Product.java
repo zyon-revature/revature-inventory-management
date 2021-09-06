@@ -26,5 +26,4 @@ public class Product{
 	private String manufacturer;
 	@Column
 	private int minlimit;
-
 }
