@@ -1,6 +1,41 @@
-<h1>{{title}}</h1>
+
+<h1 class="container">{{title}}</h1>
+<p></p>
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand">Navigation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1"
+            aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation"
+            wfd-invisible="true">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/home">Home
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/newproduct">Add Product
+                    </a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/threshold">Threshold Level</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/category">View Categories</a>
+              </li>
+            </ul>
+        </div>
 
 
-<!--need to add the router links later-->
+    </div>
+</nav>
+</div>
+<p>
+</p>
 <app-category></app-category>
 <router-outlet></router-outlet>

@@ -1,54 +1,9 @@
 <h2>Categories</h2>
 
-<!--Add column or drop down. Based on decision made in drop down or Input, take that and show the 
-specifc or requested category-->
+<select [(ngModel)] = "selectedData" (change) = "selected()">
+    <option *ngFor = "let d of data" [ngValue] = "d">
+        {{d.category}}
+    </option>
+</select>
 
-<div class="input-group">
-    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-      <option selected>Choose...</option>
-      <option value="Electronics">Electronics</option><!--this is the stuff i need -->
-      <option value="Appliances">Appliances</option>
-      <option value="Home Decor">Home Decor</option>
-    </select>
-    <button class="btn btn-outline-secondary" type="button">Search</button>
-  </div>
-
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Category</th>
-        <th>Manufacturer</th>
-        <th>Minimum Limit</th><!--min limit available?-->
-    </tr>
-
-    <tr><!--will need to change this to reflect other array-->
-        <td><div *ngFor="let d of data">{{d.id}}</div></td>
-        <td><div *ngFor="let d of data">{{d.title}}</div></td>
-        <td><div *ngFor="let d of data">{{d.category}}</div></td>
-        <td><div *ngFor="let d of data">{{d.manufacturer}}</div></td>
-        <td><div *ngFor="let d of data">{{d.minlimit}}</div></td>
-    </tr>
-</table>
-
-
-<div class="container">
-  <h1>Inventory Management System: Category Selection</h1>
-      
-  <form [formGroup]="form" (ngSubmit)="submit()"><!--makes this a reactive form entirely-->
-         <!--what I could do, is just link up what I have in the Category html to this and then see if that will work-->
-      <div class="form-group">
-          <label for="website">Category:</label><!--makes Category new name on side of selection menu-->
-          <select formControlName="website" class="form-control"><!--creates selection menu/drop down-->
-              <option disabled>Select Category</option>
-              <option>Choose Category</option>
-              <option *ngFor="let choice of categoryList">{{choice}}</option><!--parses through categoryList array.-->
-          </select>
-          <div *ngIf="f.website.touched && f.website.invalid" class="alert alert-danger">
-              <!--<div *ngIf="f.website.errors.required">Name is required.</div>-->
-          </div>
-      </div>
-     
-      <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button><!--makes sure Submit cannot be clicked until form is valid-->
-  </form>
-</div>
+{{selectedData | json}}
