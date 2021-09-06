@@ -3,7 +3,7 @@ package com.revature.Inventory.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+import lombok.*;
 import javax.persistence.*;
 import java.util.Date;
 
@@ -18,9 +18,11 @@ public class ProductStock{
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
 	@SequenceGenerator(name = "id_generator", sequenceName = "productstock_id_seq", allocationSize = 1)
+	
 	private int id;
-	@Column
-	private int productid;
+	@ManyToOne(fetch = FetchType.EAGER, optional = false, cascade = CascadeType.ALL)
+	@JoinColumn(name = "productid", nullable = false)
+	private Product productid;
 	@Column
 	private Date transactiondate;
 	@Column
@@ -36,8 +38,9 @@ public class ProductStock{
 	
 	public ProductStock() {}
 
-	public ProductStock(int productid, Date transactiondate, String vendor, String batchcode, String invoicenumber, int quantity, String transactiontype) {
+	public ProductStock(int id,Product productid, Date transactiondate, String vendor, String batchcode, String invoicenumber, int quantity, String transactiontype) {
 		super();
+		this.id = id;
 		this.productid = productid;
 		this.transactiondate = transactiondate;
 		this.vendor = vendor;
@@ -46,13 +49,22 @@ public class ProductStock{
 		this.quantity = quantity;
 		this.transactiontype = transactiontype;
 	}
+	
+	
+	public int getId() {
+		return id;
+	}
 
-	public int getProductid() {
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Product getProductid() {
 		return productid;
 	}
 
-	public void setProductid(int product_id) {
-		this.productid = product_id;
+	public void setProductid(Product productid) {
+		this.productid = productid;
 	}
 
 	public Date getTransactiondate() {
@@ -101,6 +113,15 @@ public class ProductStock{
 
 	public void setTransactiontype(String transactiontype) {
 		this.transactiontype = transactiontype;
+	}
+	
+	public ProductStock(int id, String vendor, String batchCode,String invoiceNumber, int quantity, String transactionType) {
+		this.batchcode = batchCode;
+		this.invoicenumber = invoiceNumber;
+		this.productid.setId(id);
+		this.quantity = quantity;
+		this.transactiontype = transactionType;
+		this.vendor = vendor;
 	}
 
 	@Override

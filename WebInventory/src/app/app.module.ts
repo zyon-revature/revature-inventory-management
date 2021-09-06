@@ -12,7 +12,8 @@ import { UpdateStockComponent } from './update-stock/update-stock.component';
 import { NewStockComponent } from './new-stock/new-stock.component';
 
 const routes: Routes = [
-  {path: '', component:NewProductComponent}
+  {path: '', component:NewProductComponent},
+  {path: 'createstock', component: NewStockComponent}
 ]
 
 @NgModule({
@@ -28,7 +29,8 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent],

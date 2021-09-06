@@ -35,12 +35,12 @@ public class ProductStockController {
 	
 
 	
-	@GetMapping(produces = "application/json")
+	@GetMapping(path="/invoices", produces = "application/json", consumes = "application/json")
 	public List<ProductStock> getAllInvoices(){
 		return manager.findAll();
 	}
 	
-	@PostMapping(path = "/create/{id}", consumes = "application/json", produces = "application/json")
+	@PostMapping(path = "/create", consumes = "application/json", produces = "application/json")
 	public ProductStock create(@RequestBody ProductStock ps) {
 		return manager.create(ps);
 	}
