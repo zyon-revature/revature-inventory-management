@@ -8,4 +8,7 @@ public interface ProductManager {
 	public Product create(Product p);
 	List<Product> findAll();
 
+	List<Product> findAllCategories();
+	List<Product> findByCategory(String category);
+ 
 }

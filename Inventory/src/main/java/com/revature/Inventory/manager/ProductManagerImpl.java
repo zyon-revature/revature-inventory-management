@@ -31,4 +31,17 @@ public class ProductManagerImpl implements ProductManager {
 
 	}
 
+	@Override
+	public List<Product> findAllCategories() {
+		
+		return StreamSupport.stream(dao.findAll().spliterator(), false)
+				.collect(Collectors.toList());
+	}
+	
+	@Override
+	public List<Product> findByCategory(String category) {
+
+		return dao.findByCategory(category);
+	}
+
 }
