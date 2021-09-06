@@ -8,12 +8,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SuppressWarnings("deprecation")
 @Configuration
 @EnableWebMvc
-public class AppConfig extends WebMvcConfigurerAdapter{
-	
+public class AppConfig extends WebMvcConfigurerAdapter {
+
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping("/**");
 	}
-	
-
 }

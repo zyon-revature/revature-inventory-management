@@ -1,5 +1,6 @@
 package com.revature.Inventory.manager;
 
+
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,11 +12,25 @@ import com.revature.Inventory.model.Product;
 
 @Service
 @Transactional
-public class ProductManagerImpl implements ProductManager{
+public class ProductManagerImpl implements ProductManager {
 
 	@Autowired
 	private ProductDao dao;
-	
+
+	@Override
+	public Product create(Product p) {
+
+		return dao.save(p);
+	}
+
+	@Override
+	public List<Product> findAll() {
+		// TODO Auto-generated method stub
+		return StreamSupport.stream(dao.findAll().spliterator(), false)
+				.collect(Collectors.toList());
+
+	}
+
 	@Override
 	public List<Product> findAllCategories() {
 		

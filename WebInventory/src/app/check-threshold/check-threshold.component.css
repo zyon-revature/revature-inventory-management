@@ -1,0 +1,19 @@
+.table-threshold h3{
+  font-size: x-large;
+}
+
+table{
+  text-align: center;
+  align-content: center;
+  max-width: 100em;
+}
+
+.box{
+  margin: auto ;
+  padding: 2em;
+  max-width: 70em;
+}
+
+.movement{
+  text-align: center;
+}
