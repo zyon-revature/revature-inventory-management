@@ -6,12 +6,39 @@
 
     <div class="row">
         <form class="stockForm" (ngSubmit)="onSubmit(stockForm)" #stockForm="ngForm">
-            <p>Product Id: <input name="productid" type="number" placeholder="0" ngModel></p>
-            <p>Vendor: <input name="vendor" type="vendor" placeholder="Vendor" ngModel></p>
-            <p>Batch Code: <input name="batchcode" type="text" placeholder="Batch Code" ngModel></p>
-            <p>Invoice Number: <input name="invoicenumber" type="text" placeholder="Invoice Number" ngModel></p>
-            <p>Quantity: <input name="quantity" type="number" placeholder="0" ngModel></p>
-            <p>Transaction Type: <select name="transactiontype" ngModel><option >IN</option><option >OUT</option></select></p>
+            <div>
+                <label for="productid">Product Id:</label>
+                <input id="productid" class="stockForm" type="number" name="productid" 
+                placeholder="Product ID" required ngModel>
+                
+            </div>
+            <div>
+                <label for="vendor">Vendor:</label>
+                <input id="vendor" class="stockForm" type="text" name="vendor" 
+                placeholder="vendor" required ngModel>
+            </div>
+            <div>
+                <label for="batchcode">Batch Code:</label>
+                <input id="batchcode" class="stockForm" type="text" name="batchcode" 
+                placeholder="batchcode" required ngModel>
+            </div>
+            <div>
+                <label for="invoicenumber"> Invoice Number:</label>
+                <input id="invoicenumber" class="stockForm" type="text" name="invoicenumber" 
+                placeholder="invoicenumber" required ngModel>
+            </div>
+            <div>
+                <label for="quantity"> Quantity:</label>
+                <input id="quantity" class="stockForm" type="number" name="quantity" 
+                placeholder="quantity" required ngModel>
+            </div>
+            <div>
+                <select name="transactiontype" class= "stockForm" id="selections" required ngModel>
+                    <option selected="selected" value="" >Transaction Type:</option>
+                    <option value="IN">IN</option>
+                    <option value="OUT">OUT</option>
+                </select>
+            </div>
 
             <button class="formButton" type="submit">Submit</button>
         </form>

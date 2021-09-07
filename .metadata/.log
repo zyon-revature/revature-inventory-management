@@ -12255,3 +12255,15 @@ org.eclipse.jface.text.BadPartitioningException
 
 !ENTRY org.eclipse.ui 2 2 2021-09-06 18:38:25.430
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-06 21:46:02.734
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.GdKIPFXf
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-06 21:46:02.734
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.GdKIPFXf
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-06 21:46:02.735
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-06 21:46:02.735
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.GdKIPFXf => OK

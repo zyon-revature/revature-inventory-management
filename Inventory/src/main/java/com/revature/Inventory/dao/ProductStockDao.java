@@ -16,9 +16,6 @@ import com.revature.Inventory.model.ProductStock;
 
 
 public interface ProductStockDao extends JpaRepository<ProductStock, Integer>{
-	
-	@Query("select ps from productstock ps where ps.id = :productId")
-	public ProductStock findById(@Param("productId") int id);
 
 	
 	@Query("SELECT ps FROM productstock ps")

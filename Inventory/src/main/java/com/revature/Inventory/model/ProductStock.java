@@ -20,9 +20,8 @@ public class ProductStock{
 	@SequenceGenerator(name = "id_generator", sequenceName = "productstock_id_seq", allocationSize = 1)
 	
 	private int id;
-	@ManyToOne(fetch = FetchType.EAGER, optional = false, cascade = CascadeType.ALL)
-	@JoinColumn(name = "productid", nullable = false)
-	private Product productid;
+	@Column
+	private int productid;
 	@Column
 	private Date transactiondate;
 	@Column
@@ -36,9 +35,11 @@ public class ProductStock{
 	@Column
 	private String transactiontype;
 	
-	public ProductStock() {}
+	public ProductStock() {
+		super();
+	}
 
-	public ProductStock(int Id,Product productId, Date transactionDate, String Vendor, String batchCode, String invoiceNumber, int Quantity, String transactionType) {
+	public ProductStock(int Id, int productId, Date transactionDate, String Vendor, String batchCode, String invoiceNumber, int Quantity, String transactionType) {
 		super();
 		this.id = Id;
 		this.productid = productId;
@@ -59,11 +60,11 @@ public class ProductStock{
 		this.id = id;
 	}
 
-	public Product getProductid() {
+	public int getProductid() {
 		return productid;
 	}
 
-	public void setProductid(Product productid) {
+	public void setProductid(int productid) {
 		this.productid = productid;
 	}
 
@@ -115,14 +116,6 @@ public class ProductStock{
 		this.transactiontype = transactiontype;
 	}
 	
-	public ProductStock(int id, String vendor, String batchcode,String invoicenumber, int quantity, String transactiontype) {
-		this.batchcode = batchcode;
-		this.invoicenumber = invoicenumber;
-		this.productid.setId(id);
-		this.quantity = quantity;
-		this.transactiontype = transactiontype;
-		this.vendor = vendor;
-	}
 
 	@Override
 	public String toString() {
