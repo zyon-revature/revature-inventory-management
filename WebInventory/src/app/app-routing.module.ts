@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'home', component: HomePageComponent},
   {path: 'newproduct', component: NewProductComponent},
   {path: 'threshold', component: CheckThresholdComponent},
-  {path: 'categories', component: CategoryComponent}
+  {path: 'category', component: CategoryComponent}
 ];
 
 @NgModule({

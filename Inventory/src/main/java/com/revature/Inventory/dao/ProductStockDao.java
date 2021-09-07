@@ -9,10 +9,6 @@ import com.revature.Inventory.model.ProductStock;
 import com.revature.Inventory.model.Threshold;
 
 
-
-
-
-
 public interface ProductStockDao extends JpaRepository<ProductStock, Integer>{
 	
 	public List<ProductStock> findAll();
