@@ -21,28 +21,27 @@ import com.revature.Inventory.model.Product;
 public class ProductController {
 	
 	@Autowired
-	private ProductManager manager;
+	private ProductManager manager1;
 	
 	@GetMapping(path="/category", produces = "application/json")
 	public List<Product> getAllCatgories(){
-		return manager.findAllCategories();
+		return manager1.findAllCategories();
 	}
 	 
 	@GetMapping(path="/{category}",produces="application/json")
 	public List<Product> getCategories(@PathVariable String category) {
 		System.out.println(category);
-		return manager.findByCategory(category);
+		return manager1.findByCategory(category);
 	}
-
 
 	@PostMapping(consumes = "application/json", produces = "application/json")
 	public Product create(@Valid @RequestBody Product p) {
-		return manager.create(p);
+		return manager1.create(p);
 	}
 
 	@GetMapping(produces = "application/json")
 	public List<Product> getAllProducts() {
-		return manager.findAll();
+		return manager1.findAll();
 
 	}
 }
