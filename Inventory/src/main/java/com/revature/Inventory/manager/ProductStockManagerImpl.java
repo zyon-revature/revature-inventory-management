@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.Inventory.dao.ProductStockDao;
 import com.revature.Inventory.model.ProductStock;
-//import com.revature.Inventory.model.Threshold;
+import com.revature.Inventory.model.Threshold;
 
 import java.util.stream.Collectors;
 
@@ -35,11 +35,7 @@ public class ProductStockManagerImpl implements ProductStockManager{
 		return dao.save(ps);
 	}
 	
-//	@Override
-//	public ProductStock update(ProductStock ps) {
-//		return dao.save(ps);
-//	}
-//	
+
 
 //	@Override
 //	public List<Threshold> findAllThreshold() {
@@ -50,7 +46,7 @@ public class ProductStockManagerImpl implements ProductStockManager{
 //	public List<Threshold> findThreshold() {
 //		return dao.findThreshold();
 //	}
-//	
+	
 	
 
 

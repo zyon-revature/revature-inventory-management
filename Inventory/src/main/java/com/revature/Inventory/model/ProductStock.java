@@ -5,6 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.*;
 import javax.persistence.*;
+
+import org.springframework.data.annotation.CreatedDate;
+
 import java.util.Date;
 
 
@@ -12,7 +15,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity (name="productstock")
-public class ProductStock{
+public class ProductStock extends Auditable <String>{
 
 
 	@Id
@@ -22,6 +25,7 @@ public class ProductStock{
 	private int id;
 	@Column
 	private int productid;
+	@CreatedDate
 	@Column
 	private Date transactiondate;
 	@Column

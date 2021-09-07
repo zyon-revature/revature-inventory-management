@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'threshold', component: CheckThresholdComponent},
   {path: 'newstock', component: NewStockComponent},
   {path: 'updatestock', component: NewStockComponent},
-  {path: 'categories', component: CategoryComponent}
+  {path: 'category', component: CategoryComponent}
 ];
 
 @NgModule({
