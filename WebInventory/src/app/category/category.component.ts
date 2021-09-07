@@ -19,13 +19,15 @@ export class CategoryComponent implements OnInit {
  
   public _url="http://localhost:8080/product/category";
 
+  public baseUrl="http://localhost:8080/product/category/Electronics"
+
   constructor(
     private router: Router,
     private http: HttpClient
   ) { }
 
 
-  fetchCategories(){
+  fetchCategories(){//change the _url to baseUrl if my idea works
     this.http.get(this._url)
     .subscribe(data=>{
       this.data=data;
