@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'newproduct', component: NewProductComponent},
   {path: 'threshold', component: CheckThresholdComponent},
   {path: 'newstock', component: NewStockComponent},
+  {path: 'updatestock', component: NewStockComponent},
   {path: 'categories', component: CategoryComponent}
 ];
 

@@ -55,6 +55,7 @@
   <path value="C:/Users/cewri/.m2/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/springframework/boot/spring-boot/2.5.4/spring-boot-2.5.4.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/springframework/spring-aspects/5.3.9/spring-aspects-5.3.9.jar"/>
+  <path value="C:/Users/cewri/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.5.4/spring-boot-starter-validation-2.5.4.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/slf4j/jul-to-slf4j/1.7.32/jul-to-slf4j-1.7.32.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar"/>
@@ -90,6 +91,7 @@
   <path value="C:/Users/cewri/.m2/repository/ch/qos/logback/logback-classic/1.2.5/logback-classic-1.2.5.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.52/tomcat-embed-core-9.0.52.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/junit/platform/junit-platform-engine/1.7.2/junit-platform-engine-1.7.2.jar"/>
+  <path value="C:/Users/cewri/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.5.4/spring-boot-starter-data-jpa-2.5.4.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/mockito/mockito-junit-jupiter/3.9.0/mockito-junit-jupiter-3.9.0.jar"/>
@@ -99,6 +101,7 @@
   <path value="C:/Users/cewri/.m2/repository/org/jboss/logging/jboss-logging/3.4.2.Final/jboss-logging-3.4.2.Final.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/springframework/spring-context/5.3.9/spring-context-5.3.9.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar"/>
+  <path value="C:/Users/cewri/.m2/repository/org/hibernate/validator/hibernate-validator/6.2.0.Final/hibernate-validator-6.2.0.Final.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar"/>
   <path value="C:/Users/cewri/.m2/repository/org/springframework/spring-beans/5.3.9/spring-beans-5.3.9.jar"/>
   <path value="C:/Users/cewri/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.12.4/jackson-databind-2.12.4.jar"/>

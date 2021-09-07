@@ -38,16 +38,16 @@ public class ProductStock{
 	
 	public ProductStock() {}
 
-	public ProductStock(int id,Product productid, Date transactiondate, String vendor, String batchcode, String invoicenumber, int quantity, String transactiontype) {
+	public ProductStock(int Id,Product productId, Date transactionDate, String Vendor, String batchCode, String invoiceNumber, int Quantity, String transactionType) {
 		super();
-		this.id = id;
-		this.productid = productid;
-		this.transactiondate = transactiondate;
-		this.vendor = vendor;
-		this.batchcode = batchcode;
-		this.invoicenumber = invoicenumber;
-		this.quantity = quantity;
-		this.transactiontype = transactiontype;
+		this.id = Id;
+		this.productid = productId;
+		this.transactiondate = transactionDate;
+		this.vendor = Vendor;
+		this.batchcode = batchCode;
+		this.invoicenumber = invoiceNumber;
+		this.quantity = Quantity;
+		this.transactiontype = transactionType;
 	}
 	
 	
@@ -115,12 +115,12 @@ public class ProductStock{
 		this.transactiontype = transactiontype;
 	}
 	
-	public ProductStock(int id, String vendor, String batchCode,String invoiceNumber, int quantity, String transactionType) {
-		this.batchcode = batchCode;
-		this.invoicenumber = invoiceNumber;
+	public ProductStock(int id, String vendor, String batchcode,String invoicenumber, int quantity, String transactiontype) {
+		this.batchcode = batchcode;
+		this.invoicenumber = invoicenumber;
 		this.productid.setId(id);
 		this.quantity = quantity;
-		this.transactiontype = transactionType;
+		this.transactiontype = transactiontype;
 		this.vendor = vendor;
 	}
 

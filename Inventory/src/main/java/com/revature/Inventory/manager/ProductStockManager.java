@@ -13,7 +13,7 @@ public interface ProductStockManager {
 	
 	ProductStock create(ProductStock ps);
 	
-	ProductStock update(ProductStock ps);
+//	ProductStock update(ProductStock ps);
 
 //	List<Threshold> findAllThreshold();
 //	

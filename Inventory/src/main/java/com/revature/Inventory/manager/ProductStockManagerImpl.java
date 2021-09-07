@@ -35,11 +35,11 @@ public class ProductStockManagerImpl implements ProductStockManager{
 		return dao.save(ps);
 	}
 	
-	@Override
-	public ProductStock update(ProductStock ps) {
-		return dao.save(ps);
-	}
-	
+//	@Override
+//	public ProductStock update(ProductStock ps) {
+//		return dao.save(ps);
+//	}
+//	
 
 //	@Override
 //	public List<Threshold> findAllThreshold() {

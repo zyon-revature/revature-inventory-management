@@ -34,8 +34,6 @@ public class ProductController {
 		return manager.findByCategory(category);
 	}
 
-	@Autowired
-	private ProductManager manager;
 
 	@PostMapping(consumes = "application/json", produces = "application/json")
 	public Product create(@Valid @RequestBody Product p) {

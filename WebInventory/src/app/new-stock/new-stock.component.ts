@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-new-stock',
   templateUrl: './new-stock.component.html',
@@ -10,24 +11,25 @@ import { Router } from '@angular/router';
 })
 export class NewStockComponent implements OnInit {
 
-  public url = 'http://localhost:8080/productstock/create';
+  public url = 'http://localhost:8080/productstocks/create';
 
   constructor(private router:Router, private http:HttpClient) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(invoiceForm:NgForm){
+  onSubmit(stockForm:NgForm){
 
     const httpOptions = {
     headers: new HttpHeaders({'Content-Type':'application/json'})}
 
-    console.log(invoiceForm)
-
     this.http.post(this.url, JSON.stringify({
-      productid:invoiceForm.value.productId, vendor:invoiceForm.value.vendor, 
-      batchcode:invoiceForm.value.batchCode, invoicenumber:invoiceForm.value.invoiceNum, 
-      quantity:invoiceForm.value.quantity, transactiontype:invoiceForm.value.transactionType
+      productid:stockForm.value.productid, 
+      vendor:stockForm.value.vendor, 
+      batchcode:stockForm.value.batchcode, 
+      invoicenumber:stockForm.value.invoicenumber, 
+      quantity:stockForm.value.quantity, 
+      transactiontype:stockForm.value.transactiontype
     }), httpOptions
     ).subscribe({
       next: (data) => {
@@ -36,8 +38,7 @@ export class NewStockComponent implements OnInit {
     })
 
     this.router.navigate([""])
-
-  }
+}
 
 
 }
