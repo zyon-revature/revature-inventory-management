@@ -44,19 +44,7 @@ public class ProductStockController {
 	public ProductStock create(@RequestBody ProductStock ps) {
 		return manager.create(ps);
 	}
-	
-//	@PostMapping(path = "/update", consumes = "application/json", produces = "application/json")
-//	public ProductStock update(@RequestBody ProductStock ps) {
-//		return manager.update(ps);
-//	}
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	@ExceptionHandler(MethodArgumentNotValidException.class)

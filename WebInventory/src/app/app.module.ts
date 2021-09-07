@@ -9,13 +9,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CheckThresholdComponent } from './check-threshold/check-threshold.component';
-import { UpdateStockComponent } from './update-stock/update-stock.component';
 import { NewStockComponent } from './new-stock/new-stock.component';
 
 const routes: Routes = [
   {path: '', component:NewProductComponent},
-  {path: 'createstock', component: NewStockComponent},
-  {path: 'updatestock', component: UpdateStockComponent}
+  {path: 'createstock', component: NewStockComponent}
 ]
 
 @NgModule({
@@ -25,7 +23,6 @@ const routes: Routes = [
     NewProductComponent,
     HomePageComponent,
     CheckThresholdComponent,
-    UpdateStockComponent,
     NewStockComponent
   ],
   imports: [
