@@ -110,40 +110,9 @@
   <path value="C:/Users/cewri/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.2/junit-jupiter-5.7.2.jar"/>
  </paths>
  <validation>
-  <el>
-   <linked-el length="27" name="%0" offset="686" path="%1"/>
-   <linked-el length="32" name="%0" offset="540" path="%1"/>
-   <linked-el length="27" name="%0" offset="686" path="%2"/>
-   <linked-el length="32" name="%0" offset="540" path="%2"/>
-   <linked-el length="27" name="%3" offset="686" path="%1"/>
-   <linked-el length="32" name="%3" offset="540" path="%1"/>
-   <linked-el length="27" name="%3" offset="686" path="%2"/>
-   <linked-el length="32" name="%3" offset="540" path="%2"/>
-   <linked-el length="27" name="%4" offset="686" path="%1"/>
-   <linked-el length="32" name="%4" offset="540" path="%1"/>
-   <linked-el length="27" name="%4" offset="686" path="%2"/>
-   <linked-el length="32" name="%4" offset="540" path="%2"/>
-   <linked-el length="27" name="%5" offset="686" path="%1"/>
-   <linked-el length="32" name="%5" offset="540" path="%1"/>
-   <linked-el length="27" name="%5" offset="686" path="%2"/>
-   <linked-el length="32" name="%5" offset="540" path="%2"/>
-   <linked-el length="27" name="%6" offset="686" path="%1"/>
-   <linked-el length="32" name="%6" offset="540" path="%1"/>
-   <linked-el length="27" name="%6" offset="686" path="%2"/>
-   <linked-el length="32" name="%6" offset="540" path="%2"/>
-  </el>
+  <el/>
  </validation>
- <aliases>
-  <alias path="org.eclipse.m2e.log.dir" value="%0"/>
-  <alias path="org" value="%3"/>
-  <alias
-   path="/Inventory/bin/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.16.1.20210603-1006.xml" value="%1"/>
-  <alias path="org.eclipse" value="%4"/>
-  <alias path="org.eclipse.m2e.log" value="%5"/>
-  <alias
-   path="/Inventory/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.16.1.20210603-1006.xml" value="%2"/>
-  <alias path="org.eclipse.m2e" value="%6"/>
- </aliases>
+ <aliases/>
  <includes/>
  <uris/>
 </kb-project>
