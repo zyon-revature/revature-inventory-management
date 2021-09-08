@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Data, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -23,7 +24,8 @@ export class CategoryComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private http: HttpClient
+    private http: HttpClient,
+    private location: Location
   ) { }
 
 
@@ -41,5 +43,8 @@ export class CategoryComponent implements OnInit {
   onSelect(data: Data): void{
     this.selectedData=data;
   }
+  goBack(): void{
+    this.location.back();
+   }
 
 }
