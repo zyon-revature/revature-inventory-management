@@ -110,7 +110,6 @@
   <path value="C:/Users/cewri/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.2/junit-jupiter-5.7.2.jar"/>
  </paths>
  <validation>
-  <core validator-id="jboss.cdi.core"/>
   <el>
    <linked-el length="27" name="%0" offset="686" path="%1"/>
    <linked-el length="32" name="%0" offset="540" path="%1"/>
