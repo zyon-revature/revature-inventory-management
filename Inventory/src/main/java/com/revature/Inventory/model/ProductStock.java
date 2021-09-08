@@ -14,7 +14,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @Entity (name="productstock")
-public class ProductStock extends Auditable <String>{
+public class ProductStock {
 
 
 	@Id
