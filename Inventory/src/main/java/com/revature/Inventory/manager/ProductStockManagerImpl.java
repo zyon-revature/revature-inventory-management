@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.revature.Inventory.dao.ProductDao;
 import com.revature.Inventory.dao.ProductStockDao;
+import com.revature.Inventory.model.Product;
 import com.revature.Inventory.model.ProductStock;
 import com.revature.Inventory.model.Threshold;
 
@@ -19,6 +21,8 @@ public class ProductStockManagerImpl implements ProductStockManager{
 	
 	@Autowired
 	private ProductStockDao dao;
+	@Autowired
+	private ProductDao daoP;
 	
 	@Override
 	public List<ProductStock> findAll() {
@@ -32,6 +36,8 @@ public class ProductStockManagerImpl implements ProductStockManager{
 
 	@Override
 	public ProductStock create(ProductStock ps) {
+		Product product =daoP.findById(ps.getProductid()).get();
+		ps.setProduct(product);
 		return dao.save(ps);
 	}
 	

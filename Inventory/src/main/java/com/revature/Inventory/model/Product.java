@@ -2,6 +2,8 @@ package com.revature.Inventory.model;
 
 import lombok.*;
 
+import java.util.Set;
+
 import javax.persistence.*;
 
 
@@ -15,6 +17,8 @@ public class Product{
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
 	@SequenceGenerator(name = "id_generator", sequenceName = "product_id_seq", allocationSize = 1)
+	
+
 	private int id;
 	@Column
 	private String title;
@@ -24,6 +28,11 @@ public class Product{
 	private String manufacturer;
 	@Column
 	private int minlimit;
+	
+	@OneToMany(mappedBy="product", cascade=CascadeType.ALL)
+	private Set<ProductStock> productStock;
+	
+	
 	public int getId() {
 		return id;
 	}
