@@ -2,7 +2,6 @@ package com.revature.Inventory.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.*;
 import javax.persistence.*;
 
@@ -11,9 +10,9 @@ import org.springframework.data.annotation.CreatedDate;
 import java.util.Date;
 
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity (name="productstock")
 public class ProductStock extends Auditable <String>{
 
@@ -38,15 +37,20 @@ public class ProductStock extends Auditable <String>{
 	private int quantity;
 	@Column
 	private String transactiontype;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "productid")
+	private Product product;
 	
 	public ProductStock() {
 		super();
 	}
 
+	//public ProductStock(int Id, Date transactionDate, String Vendor, String batchCode, String invoiceNumber, int Quantity, String transactionType){
 	public ProductStock(int Id, int productId, Date transactionDate, String Vendor, String batchCode, String invoiceNumber, int Quantity, String transactionType) {
 		super();
 		this.id = Id;
-		this.productid = productId;
+		this.product.setId(productId);
 		this.transactiondate = transactionDate;
 		this.vendor = Vendor;
 		this.batchcode = batchCode;
@@ -65,11 +69,11 @@ public class ProductStock extends Auditable <String>{
 	}
 
 	public int getProductid() {
-		return productid;
+		return product.getId();
 	}
 
 	public void setProductid(int productid) {
-		this.productid = productid;
+		product.setId(productid);
 	}
 
 	public Date getTransactiondate() {
@@ -123,7 +127,7 @@ public class ProductStock extends Auditable <String>{
 
 	@Override
 	public String toString() {
-		return "productstock [id=" + id + ", productid=" + productid + ", transactiondate=" + transactiondate+ ", vendor=" + vendor + ", batchcode=" + batchcode + ", invoicenumber=" + invoicenumber + ", quantity=" + quantity + ", transactiontype=" + transactiontype + "]";
+		return "productstock [id=" + id + ", productid=" + product.getId() + ", transactiondate=" + transactiondate+ ", vendor=" + vendor + ", batchcode=" + batchcode + ", invoicenumber=" + invoicenumber + ", quantity=" + quantity + ", transactiontype=" + transactiontype + "]";
 	}
 
 

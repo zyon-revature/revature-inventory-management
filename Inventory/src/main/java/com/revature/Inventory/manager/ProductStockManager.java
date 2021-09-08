@@ -14,7 +14,7 @@ public interface ProductStockManager {
 	ProductStock create(ProductStock ps);
 	
 
-//	List<Threshold> findAllThreshold();
-//	
-//	List<Threshold> findThreshold();
+	List<Threshold> findAllThreshold();
+
+	List<Threshold> findThreshold();
 }
