@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.*;
 import javax.persistence.*;
+
+import org.springframework.data.annotation.CreatedDate;
+
 import java.util.Date;
 
 
@@ -11,7 +14,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @Entity (name="productstock")
-public class ProductStock{
+public class ProductStock extends Auditable <String>{
 
 
 	@Id
@@ -19,8 +22,9 @@ public class ProductStock{
 	@SequenceGenerator(name = "id_generator", sequenceName = "productstock_id_seq", allocationSize = 1)
 	
 	private int id;
-//	@Column
-//	private int productid;
+	@Column
+	private int productid;
+	@CreatedDate
 	@Column
 	private Date transactiondate;
 	@Column
