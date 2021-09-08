@@ -14,7 +14,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @Entity (name="productstock")
-public class ProductStock extends Auditable <String>{
+public class ProductStock extends Auditable<String>{
 
 
 	@Id
@@ -22,7 +22,8 @@ public class ProductStock extends Auditable <String>{
 	@SequenceGenerator(name = "id_generator", sequenceName = "productstock_id_seq", allocationSize = 1)
 	
 	private int id;
-	@Column
+	@Transient
+	//@Column(name="productid", columnDefinition="int8",insertable = false, updatable = false)
 	private int productid;
 	@CreatedDate
 	@Column
@@ -38,8 +39,9 @@ public class ProductStock extends Auditable <String>{
 	@Column
 	private String transactiontype;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "productid")
+	//@OneToOne(cascade = CascadeType.ALL)
+	@ManyToOne
+	@JoinColumn(name = "productid")//, referencedColumnName="id")
 	private Product product;
 	
 	public ProductStock() {
@@ -50,7 +52,8 @@ public class ProductStock extends Auditable <String>{
 	public ProductStock(int Id, int productId, Date transactionDate, String Vendor, String batchCode, String invoiceNumber, int Quantity, String transactionType) {
 		super();
 		this.id = Id;
-		this.product.setId(productId);
+		//this.product.setId(productId);
+		this.productid=productId;
 		this.transactiondate = transactionDate;
 		this.vendor = Vendor;
 		this.batchcode = batchCode;
@@ -69,11 +72,13 @@ public class ProductStock extends Auditable <String>{
 	}
 
 	public int getProductid() {
-		return product.getId();
+		//return product.getId();
+		return productid;
 	}
 
-	public void setProductid(int productid) {
-		product.setId(productid);
+	public void setProductid(int productId) {
+		//product.setId(productId);
+		this.productid=productId;
 	}
 
 	public Date getTransactiondate() {
@@ -129,6 +134,15 @@ public class ProductStock extends Auditable <String>{
 	public String toString() {
 		return "productstock [id=" + id + ", productid=" + product.getId() + ", transactiondate=" + transactiondate+ ", vendor=" + vendor + ", batchcode=" + batchcode + ", invoicenumber=" + invoicenumber + ", quantity=" + quantity + ", transactiontype=" + transactiontype + "]";
 	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+	
 
 
 }
