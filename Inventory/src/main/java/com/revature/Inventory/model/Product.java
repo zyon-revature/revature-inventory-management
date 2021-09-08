@@ -6,8 +6,6 @@ import javax.persistence.*;
 
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 @Entity (name="product")
@@ -67,8 +65,6 @@ public class Product{
 	public Product() {
 		super();
 	}
-	
-	
 }
 
 

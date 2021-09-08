@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.validation.ConstraintViolationException;
 
+import com.revature.Inventory.model.Threshold;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
@@ -45,6 +46,15 @@ public class ProductStockController {
 		return manager.create(ps);
 	}
 
+	@GetMapping(path = "/threshold" ,produces = "application/json")
+	public List<Threshold> findThreshold(){
+		return manager.findThreshold();
+	}
+
+	@GetMapping(path = "/threshold/all" ,produces = "application/json")
+	public List<Threshold> findAllThreshold(){
+		return manager.findAllThreshold();
+	}
 	
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	@ExceptionHandler(MethodArgumentNotValidException.class)
